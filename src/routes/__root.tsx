@@ -77,14 +77,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "ELEVAPLUS — Alquiler de maquinaria de elevación" },
+      {
+        name: "description",
+        content:
+          "Alquiler de autoelevadores, plataformas de elevación, zorras y escaleras. Zona sur y envíos a todo el país. Consultá por WhatsApp.",
+      },
+      { name: "author", content: "ELEVAPLUS" },
+      { property: "og:title", content: "ELEVAPLUS — Alquiler de maquinaria de elevación" },
+      {
+        property: "og:description",
+        content:
+          "Autoelevadores, plataformas, zorras y escaleras. Equipos confiables, entrega rápida y cobertura nacional.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -92,6 +99,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
