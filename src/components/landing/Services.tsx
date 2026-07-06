@@ -1,7 +1,9 @@
-import forkliftImg from "@/assets/service-forklift.jpg";
+import forkliftImg from "@/assets/services/service-forklift-real.jpg";
 import platformImg from "@/assets/service-platform.jpg";
 import palletImg from "@/assets/service-pallet.jpg";
 import ladderImg from "@/assets/service-ladder.jpg";
+import transportImg from "@/assets/services/service-transport.jpg";
+import maintenanceImg from "@/assets/services/service-maintenance.jpg";
 import { useFadeIn } from "@/hooks/use-fade-in";
 
 const services = [
@@ -9,7 +11,7 @@ const services = [
     n: "01",
     title: "Autoelevadores",
     img: forkliftImg,
-    alt: "Autoelevador amarillo",
+    alt: "Autoelevador eléctrico ELEVAPLUS en depósito",
     desc: "Equipos de distintas capacidades para carga y descarga en obra, depósito o industria. Ideales para mover mercadería pesada de forma segura y eficiente.",
   },
   {
@@ -33,6 +35,20 @@ const services = [
     alt: "Escalera industrial",
     desc: "Escaleras de distintas alturas para trabajos que requieren acceso rápido y seguro a zonas elevadas.",
   },
+  {
+    n: "05",
+    title: "Transporte de vehículos y maquinaria",
+    img: transportImg,
+    alt: "Camión plataforma ELEVAPLUS transportando un vehículo utilitario",
+    desc: "Trasladamos vehículos, maquinaria pesada y equipos industriales con camión plataforma, cuidando cada carga de punto a punto en zona sur y todo el país.",
+  },
+  {
+    n: "06",
+    title: "Mantenimiento y reparación",
+    img: maintenanceImg,
+    alt: "Técnico de ELEVAPLUS realizando un service en la vía pública",
+    desc: "Service técnico especializado en autoelevadores: mantenimiento preventivo y reparaciones para que tu equipo esté siempre operativo.",
+  },
 ];
 
 export function Services() {
@@ -49,7 +65,7 @@ export function Services() {
             Todo lo que necesitás para mover, elevar y trabajar en altura.
           </h2>
         </div>
-        <div ref={fade.ref} className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-4 ${fade.className}`}>
+        <div ref={fade.ref} className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ${fade.className}`}>
           {services.map((s) => (
             <article
               key={s.n}

@@ -12,7 +12,7 @@ export function FinalCTA() {
       >
         <div className="mb-10 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">
           <span className="h-px w-10 bg-accent" />
-          <span>05 — Contacto</span>
+          <span>06 — Contacto</span>
         </div>
         <h2 className="max-w-3xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
           ¿Necesitás alquilar{" "}

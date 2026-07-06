@@ -12,7 +12,7 @@ export function Coverage() {
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.24em] text-primary-foreground/60">
             <span className="h-px w-10 bg-accent" />
-            <span>04 — Zona de cobertura</span>
+            <span>05 — Zona de cobertura</span>
           </div>
           <h2 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl">
             Trabajamos en zona sur.{" "}

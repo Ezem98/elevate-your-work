@@ -32,7 +32,7 @@ export function WhyUs() {
         <div className="mb-14 grid gap-6 md:grid-cols-[auto_1fr] md:items-end md:gap-16">
           <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">
             <span className="h-px w-10 bg-accent" />
-            <span>03 — Por qué elegirnos</span>
+            <span>04 — Por qué elegirnos</span>
           </div>
           <h2 className="max-w-2xl text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl">
             Trabajamos como si tu obra fuera nuestra.
