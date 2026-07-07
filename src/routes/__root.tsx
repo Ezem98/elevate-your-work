@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "ELEVAPLUS — Alquiler de maquinaria de elevación" },
+      { name: "description", content: "Alquiler de autoelevadores, plataformas de elevación, zorras y escaleras. Zona sur y envíos a todo el país. Consultá por WhatsApp." },
+      { property: "og:description", content: "Alquiler de autoelevadores, plataformas de elevación, zorras y escaleras. Zona sur y envíos a todo el país. Consultá por WhatsApp." },
+      { name: "twitter:description", content: "Alquiler de autoelevadores, plataformas de elevación, zorras y escaleras. Zona sur y envíos a todo el país. Consultá por WhatsApp." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/gcwehiSKImZ1CYx7xH1w77H9Qff2/social-images/social-1783433234229-93590.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/gcwehiSKImZ1CYx7xH1w77H9Qff2/social-images/social-1783433234229-93590.webp" },
     ],
     links: [
       {
