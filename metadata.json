@@ -1,0 +1,6 @@
+{
+  "name": "ELEVAPLUS — Alquiler de maquinaria de elevación",
+  "description": "Alquiler de autoelevadores, plataformas de elevación, zorras y escaleras. Zona sur y envíos a todo el país. Consultá por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

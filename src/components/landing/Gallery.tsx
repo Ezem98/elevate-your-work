@@ -29,7 +29,10 @@ export function Gallery() {
             Cargas reales, en obra, todos los días.
           </h2>
         </div>
-        <div ref={fade.ref} className={`grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 ${fade.className}`}>
+        <div
+          ref={fade.ref}
+          className={`grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 ${fade.className}`}
+        >
           {photos.map((p, i) => (
             <div
               key={p.alt}

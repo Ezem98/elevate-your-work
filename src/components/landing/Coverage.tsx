@@ -15,8 +15,7 @@ export function Coverage() {
             <span>05 — Zona de cobertura</span>
           </div>
           <h2 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl">
-            Trabajamos en zona sur.{" "}
-            <span className="text-accent">Llegamos a todo el país.</span>
+            Trabajamos en zona sur. <span className="text-accent">Llegamos a todo el país.</span>
           </h2>
           <p className="max-w-2xl text-base font-light text-primary-foreground/75 sm:text-lg">
             Si estás en zona sur podemos coordinar entrega inmediata. Y si estás en cualquier otro

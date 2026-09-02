@@ -1,6 +1,7 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-forklift.jpg";
 import { WHATSAPP_URL } from "./constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function Hero() {
   return (
@@ -21,13 +22,16 @@ export function Hero() {
           </h1>
           <p className="max-w-xl text-base font-light text-muted-foreground sm:text-lg">
             Autoelevadores, plataformas, zorras y escaleras. Equipos confiables, entrega rápida y
-            cobertura en todo el país.
+            cobertura en Zona Sur y todo el país.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("hero_primary_cta")}
+              id="hero-whatsapp-button"
+              data-tracking="whatsapp_conversion"
               className="group inline-flex items-center gap-3 bg-accent px-6 py-4 text-sm font-semibold uppercase tracking-wider text-accent-foreground transition-transform hover:-translate-y-0.5"
             >
               <MessageCircle className="h-5 w-5" />
@@ -36,6 +40,7 @@ export function Hero() {
             </a>
             <a
               href="#servicios"
+              id="hero-view-services-link"
               className="text-sm font-medium uppercase tracking-wider text-foreground underline-offset-8 hover:underline"
             >
               Ver equipos →
@@ -60,7 +65,7 @@ export function Hero() {
           <div className="absolute -inset-4 -z-10 bg-accent/10" aria-hidden />
           <img
             src={heroImage}
-            alt="Autoelevador industrial amarillo en depósito"
+            alt="Autoelevador industrial en depósito de elevaplus"
             width={1600}
             height={1100}
             className="h-full w-full object-cover"

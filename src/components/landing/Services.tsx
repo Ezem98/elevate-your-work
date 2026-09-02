@@ -65,7 +65,10 @@ export function Services() {
             Todo lo que necesitás para mover, elevar y trabajar en altura.
           </h2>
         </div>
-        <div ref={fade.ref} className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ${fade.className}`}>
+        <div
+          ref={fade.ref}
+          className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ${fade.className}`}
+        >
           {services.map((s) => (
             <article
               key={s.n}

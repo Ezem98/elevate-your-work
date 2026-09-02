@@ -38,7 +38,10 @@ export function WhyUs() {
             Trabajamos como si tu obra fuera nuestra.
           </h2>
         </div>
-        <div ref={fade.ref} className={`grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4 ${fade.className}`}>
+        <div
+          ref={fade.ref}
+          className={`grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4 ${fade.className}`}
+        >
           {points.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="flex flex-col gap-4 bg-background p-8">
               <span className="grid h-12 w-12 shrink-0 place-items-center bg-accent text-accent-foreground">
