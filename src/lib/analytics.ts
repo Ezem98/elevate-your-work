@@ -13,15 +13,23 @@ export function trackEvent(eventName: string, params: Record<string, unknown> = 
   }
 }
 
+const WA_CONVERSION_LABEL = "AW-18326519357/oJ1JCM6agvkcEL384aJE";
+const PHONE_CONVERSION_LABEL = "AW-18326519357/hqhACNGagvkcEL384aJE";
+
 export function trackWhatsAppClick(location: string) {
   trackEvent("whatsapp_click", {
     event_category: "Lead",
     event_label: location,
   });
-  // Google Ads conversion event standard hook (can also be mapped via GTM or Google Ads conversion tag)
+
   trackEvent("generate_lead", {
     source: "whatsapp",
     location,
+  });
+
+  // Disparo directo a Google Ads
+  trackEvent("conversion", {
+    send_to: WA_CONVERSION_LABEL,
   });
 }
 
@@ -30,8 +38,14 @@ export function trackPhoneClick(location: string) {
     event_category: "Lead",
     event_label: location,
   });
+
   trackEvent("generate_lead", {
     source: "phone_call",
     location,
+  });
+
+  // Disparo directo a Google Ads
+  trackEvent("conversion", {
+    send_to: PHONE_CONVERSION_LABEL,
   });
 }
