@@ -14,4 +14,5 @@ export const INSTAGRAM_HANDLE = "@elevaplus_";
 
 // Google Tag ID: configured via VITE_GTAG_ID or default Google Ads/GA4 ID
 export const GTAG_ID =
-  (typeof import.meta !== "undefined" && import.meta.env?.VITE_GTAG_ID) || "AW-XXXXXXXXX";
+  (typeof import.meta !== "undefined" && import.meta.env?.VITE_GTAG_ID) || "AW-18326519357";
+
