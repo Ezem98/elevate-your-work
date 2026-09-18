@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Background with slight rounded corners for app icons -->
+  <rect width="512" height="512" rx="108" fill="#0A0E17"/>
+  
+  <!-- Subtle brand glow / accent -->
+  <circle cx="256" cy="256" r="180" fill="#0062FF" opacity="0.12" filter="blur(40px)"/>
+
+  <!-- Top Railing / Basket (Plataforma) -->
+  <rect x="136" y="100" width="240" height="42" rx="8" fill="#0062FF"/>
+  <path d="M166 100 V160 M256 100 V160 M346 100 V160" stroke="#0062FF" stroke-width="14" stroke-linecap="round"/>
+  <rect x="120" y="160" width="272" height="34" rx="8" fill="#0062FF"/>
+
+  <!-- Scissor Mechanism (Tijera X) - High Contrast White & Silver -->
+  <g stroke="#FFFFFF" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Upper X -->
+    <line x1="148" y1="194" x2="364" y2="268" />
+    <line x1="364" y1="194" x2="148" y2="268" />
+    <!-- Lower X -->
+    <line x1="148" y1="268" x2="364" y2="342" />
+    <line x1="364" y1="268" x2="148" y2="342" />
+  </g>
+
+  <!-- Joint Pivot Pins in Electric Blue -->
+  <circle cx="256" cy="231" r="12" fill="#0062FF" stroke="#0A0E17" stroke-width="4"/>
+  <circle cx="256" cy="305" r="12" fill="#0062FF" stroke="#0A0E17" stroke-width="4"/>
+  <circle cx="148" cy="268" r="10" fill="#0062FF"/>
+  <circle cx="364" cy="268" r="10" fill="#0062FF"/>
+
+  <!-- Chassis / Base (Chasis) -->
+  <rect x="120" y="342" width="272" height="44" rx="8" fill="#0062FF"/>
+
+  <!-- Wheels / Base supports -->
+  <circle cx="170" cy="406" r="28" fill="#0062FF"/>
+  <circle cx="170" cy="406" r="12" fill="#0A0E17"/>
+  <circle cx="342" cy="406" r="28" fill="#0062FF"/>
+  <circle cx="342" cy="406" r="12" fill="#0A0E17"/>
+  <rect x="180" y="386" width="152" height="20" rx="4" fill="#0052D0"/>
+</svg>
+
