@@ -1,6 +1,6 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-forklift.jpg";
-import { WHATSAPP_URL } from "./constants";
+import { MINIMO_HORAS, PRECIO_HORA, WHATSAPP_URL } from "./constants";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function Hero() {
@@ -46,6 +46,11 @@ export function Hero() {
               Ver equipos →
             </a>
           </div>
+          <p className="-mt-2 inline-flex w-fit flex-wrap items-baseline gap-x-2 border-l-4 border-accent bg-accent/10 px-4 py-3 text-sm text-foreground sm:text-base">
+            <span className="font-medium">Alquiler por hora:</span>
+            <strong className="font-black">{PRECIO_HORA}</strong>
+            <span className="text-muted-foreground">· {MINIMO_HORAS}</span>
+          </p>
           <dl className="mt-4 grid grid-cols-3 gap-6 border-t border-border pt-8 text-left">
             <div>
               <dt className="text-xs uppercase tracking-wider text-muted-foreground">Cobertura</dt>
