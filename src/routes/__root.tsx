@@ -100,6 +100,7 @@ const schemaLocalBusiness = {
     { "@type": "City", name: "Lomas de Zamora" },
     { "@type": "City", name: "Florencio Varela" },
     { "@type": "City", name: "Esteban Echeverría" },
+    { "@type": "City", name: "La Plata" },
     { "@type": "City", name: "Ciudad Autónoma de Buenos Aires" },
   ],
   sameAs: [INSTAGRAM_URL],
