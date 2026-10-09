@@ -30,6 +30,7 @@ export function Coverage() {
               "Florencio Varela",
               "Almirante Brown",
               "Esteban Echeverría",
+              "La Plata",
               "CABA",
             ].map((z) => (
               <span
