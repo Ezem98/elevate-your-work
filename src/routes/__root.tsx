@@ -99,6 +99,7 @@ const schemaLocalBusiness = {
     { "@type": "City", name: "Almirante Brown" },
     { "@type": "City", name: "Lomas de Zamora" },
     { "@type": "City", name: "La Plata" },
+    { "@type": "City", name: "Ciudad Autónoma de Buenos Aires" },
     { "@type": "AdministrativeArea", name: "Gran Buenos Aires" },
     { "@type": "Country", name: "Argentina" },
   ],
@@ -114,6 +115,15 @@ const schemaLocalBusiness = {
           name: "Alquiler de Autoelevadores",
           description:
             "Alquiler de autoelevadores (sampi, clark) a combustión y eléctricos para industrias, obras y depósitos.",
+        },
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: 40000,
+          priceCurrency: "ARS",
+          unitText: "hora",
+          unitCode: "HUR",
+          valueAddedTaxIncluded: false,
+          eligibleQuantity: { "@type": "QuantitativeValue", minValue: 3, unitCode: "HUR" },
         },
       },
       {
@@ -146,9 +156,9 @@ const schemaLocalBusiness = {
   },
 };
 
-const SITE_TITLE = "Alquiler de Autoelevadores y Plataformas | Zona Sur — ELEVAPLUS";
+const SITE_TITLE = "Alquiler de Autoelevadores por Hora | Zona Sur y CABA — ELEVAPLUS";
 const SITE_DESCRIPTION =
-  "Alquiler de autoelevadores, plataformas de elevación, zorras y escaleras en Zona Sur (Avellaneda, Lanús, Quilmes, Berazategui, Brown, Lomas, La Plata) y todo el país. Cotizá por WhatsApp.";
+  "Alquiler de autoelevadores por hora y sampi en Zona Sur y CABA. $40.000 + IVA la hora, mínimo 3 hs. Factura A, ART y traslado propio.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({

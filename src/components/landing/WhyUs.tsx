@@ -1,7 +1,14 @@
-import { Truck, Wrench, Zap, Handshake } from "lucide-react";
+import { Truck, Wrench, Zap, Handshake, BadgeDollarSign } from "lucide-react";
 import { useFadeIn } from "@/hooks/use-fade-in";
+import { MINIMO_HORAS, PRECIO_HORA } from "./constants";
 
 const points = [
+  {
+    icon: BadgeDollarSign,
+    title: "Precios bajos",
+    desc: `Alquiler por hora a ${PRECIO_HORA}, ${MINIMO_HORAS}. Mismo precio para todos los equipos.`,
+    destacado: true,
+  },
   {
     icon: Truck,
     title: "Cobertura nacional",
@@ -40,10 +47,13 @@ export function WhyUs() {
         </div>
         <div
           ref={fade.ref}
-          className={`grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4 ${fade.className}`}
+          className={`grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-5 ${fade.className}`}
         >
-          {points.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="flex flex-col gap-4 bg-background p-8">
+          {points.map(({ icon: Icon, title, desc, destacado }) => (
+            <div
+              key={title}
+              className={`flex flex-col gap-4 bg-background p-8 ${destacado ? "sm:col-span-2 lg:col-span-1" : ""}`}
+            >
               <span className="grid h-12 w-12 shrink-0 place-items-center bg-accent text-accent-foreground">
                 <Icon className="h-5 w-5" strokeWidth={2.2} />
               </span>

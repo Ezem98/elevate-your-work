@@ -4,15 +4,18 @@ import palletImg from "@/assets/service-pallet.jpg";
 import ladderImg from "@/assets/service-ladder.jpg";
 import transportImg from "@/assets/services/service-transport.jpg";
 import maintenanceImg from "@/assets/services/service-maintenance.jpg";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { useFadeIn } from "@/hooks/use-fade-in";
+import { trackWhatsAppClick } from "@/lib/analytics";
+import { MINIMO_HORAS, PRECIO_HORA, WHATSAPP_URL } from "./constants";
 
 const services = [
   {
     n: "01",
-    title: "Autoelevadores",
+    title: "Autoelevadores y sampi",
     img: forkliftImg,
     alt: "Autoelevador eléctrico ELEVAPLUS en depósito",
-    desc: "También conocidos como sampi o clark. Equipos de distintas capacidades para carga y descarga en obra, depósito o industria. Ideales para mover mercadería pesada de forma segura y eficiente.",
+    desc: "También conocidos como clark. Equipos de distintas capacidades para carga y descarga en obra, depósito o industria. Ideales para mover mercadería pesada de forma segura y eficiente.",
   },
   {
     n: "02",
@@ -93,6 +96,57 @@ export function Services() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-16 border border-border bg-background">
+          <div className="flex flex-col gap-3 border-b border-border p-6 md:flex-row md:items-end md:justify-between md:p-8">
+            <h3 className="text-2xl font-black tracking-tight sm:text-3xl">
+              Precios de alquiler de autoelevadores y sampi
+            </h3>
+            <p className="text-sm font-light text-muted-foreground">
+              Mismo precio para todos los equipos.
+            </p>
+          </div>
+          <dl className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            <div className="flex flex-col gap-2 bg-accent/10 p-6 md:p-8">
+              <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Por hora
+              </dt>
+              <dd className="text-3xl font-black tracking-tight">{PRECIO_HORA}</dd>
+              <dd className="text-sm text-muted-foreground">{MINIMO_HORAS}, todos los equipos</dd>
+            </div>
+            <div className="flex flex-col gap-2 bg-background p-6 md:p-8">
+              <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Por día
+              </dt>
+              <dd className="text-3xl font-black tracking-tight">Consultanos</dd>
+            </div>
+            <div className="flex flex-col gap-2 bg-background p-6 md:p-8">
+              <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Por mes
+              </dt>
+              <dd className="text-3xl font-black tracking-tight">Consultanos</dd>
+            </div>
+          </dl>
+          <div className="flex flex-col gap-5 border-t border-border p-6 md:flex-row md:items-center md:justify-between md:p-8">
+            <p className="max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
+              Zona Sur y CABA, con traslado en camión plataforma propio. Factura A, ART y seguro de
+              carga.
+            </p>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("services_pricing_cta")}
+              id="services-pricing-whatsapp-button"
+              data-tracking="whatsapp_conversion"
+              className="group inline-flex w-fit items-center gap-3 bg-accent px-6 py-4 text-sm font-semibold uppercase tracking-wider text-accent-foreground transition-transform hover:-translate-y-0.5"
+            >
+              <MessageCircle className="h-5 w-5" />
+              Cotizá por WhatsApp
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
