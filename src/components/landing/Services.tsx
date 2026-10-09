@@ -43,7 +43,7 @@ const services = [
     title: "Transporte de vehículos y maquinaria",
     img: transportImg,
     alt: "Camión plataforma ELEVAPLUS transportando un vehículo utilitario",
-    desc: "Trasladamos vehículos, maquinaria pesada y equipos industriales con camión plataforma, cuidando cada carga de punto a punto en zona sur y todo el país.",
+    desc: "Trasladamos vehículos, maquinaria pesada y equipos industriales con camión plataforma, cuidando cada carga de punto a punto en Zona Sur y CABA.",
   },
   {
     n: "06",

@@ -15,30 +15,37 @@ export function Coverage() {
             <span>05 — Zona de cobertura</span>
           </div>
           <h2 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl">
-            Trabajamos en zona sur. <span className="text-accent">Llegamos a todo el país.</span>
+            Trabajamos en Zona Sur <span className="text-accent">y CABA.</span>
           </h2>
           <p className="max-w-2xl text-base font-light text-primary-foreground/75 sm:text-lg">
-            Si estás en zona sur podemos coordinar entrega inmediata. Y si estás en cualquier otro
-            punto de Argentina, también te llevamos el equipo que necesitás.
+            Coordinamos la entrega con nuestro camión plataforma propio en toda Zona Sur y en CABA.
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
-            {["Avellaneda", "Lanús", "Quilmes", "Berazategui", "La Plata", "Todo el país"].map(
-              (z) => (
-                <span
-                  key={z}
-                  className="inline-flex items-center gap-1.5 border border-primary-foreground/20 px-3 py-1.5 text-xs font-medium uppercase tracking-wider"
-                >
-                  <MapPin className="h-3 w-3 text-accent" />
-                  {z}
-                </span>
-              ),
-            )}
+            {[
+              "Avellaneda",
+              "Lanús",
+              "Quilmes",
+              "Lomas de Zamora",
+              "Berazategui",
+              "Florencio Varela",
+              "Almirante Brown",
+              "Esteban Echeverría",
+              "CABA",
+            ].map((z) => (
+              <span
+                key={z}
+                className="inline-flex items-center gap-1.5 border border-primary-foreground/20 px-3 py-1.5 text-xs font-medium uppercase tracking-wider"
+              >
+                <MapPin className="h-3 w-3 text-accent" />
+                {z}
+              </span>
+            ))}
           </div>
         </div>
         <div className="hidden md:block">
           <div className="relative flex h-64 w-64 items-center justify-center border border-primary-foreground/15">
             <span className="absolute left-3 top-3 text-[10px] uppercase tracking-widest text-primary-foreground/50">
-              AR / Zona Sur
+              Zona Sur / CABA
             </span>
             <div className="relative h-40 w-40">
               <span className="absolute inset-0 rounded-full border border-accent/50" />

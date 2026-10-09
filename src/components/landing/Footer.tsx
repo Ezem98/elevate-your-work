@@ -55,7 +55,7 @@ export function Footer() {
             </a>
             <span className="inline-flex items-center gap-2 text-sm text-primary-foreground/70">
               <MapPin className="h-4 w-4" />
-              Zona Sur, Buenos Aires · Envíos a todo el país
+              Zona Sur y CABA · Traslado con camión propio
             </span>
           </div>
           <div className="flex flex-col gap-3">

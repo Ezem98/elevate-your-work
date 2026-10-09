@@ -80,7 +80,7 @@ const schemaLocalBusiness = {
   name: "ELEVAPLUS",
   alternateName: "Eleveplus",
   description:
-    "Alquiler de maquinaria de elevación, autoelevadores, plataformas de elevación tijera y articuladas, zorras, escaleras, servicio de transporte de carga pesada y mantenimiento en Zona Sur y toda la Argentina.",
+    "Alquiler de maquinaria de elevación, autoelevadores, plataformas de elevación tijera y articuladas, zorras, escaleras, servicio de transporte de carga pesada y mantenimiento en Zona Sur y CABA.",
   url: SITE_URL,
   telephone: PHONE_RAW,
   priceRange: "$$",
@@ -98,10 +98,9 @@ const schemaLocalBusiness = {
     { "@type": "City", name: "Berazategui" },
     { "@type": "City", name: "Almirante Brown" },
     { "@type": "City", name: "Lomas de Zamora" },
-    { "@type": "City", name: "La Plata" },
+    { "@type": "City", name: "Florencio Varela" },
+    { "@type": "City", name: "Esteban Echeverría" },
     { "@type": "City", name: "Ciudad Autónoma de Buenos Aires" },
-    { "@type": "AdministrativeArea", name: "Gran Buenos Aires" },
-    { "@type": "Country", name: "Argentina" },
   ],
   sameAs: [INSTAGRAM_URL],
   hasOfferCatalog: {

@@ -11,8 +11,8 @@ const points = [
   },
   {
     icon: Truck,
-    title: "Cobertura nacional",
-    desc: "Trabajamos en zona sur y hacemos envíos a todo el país.",
+    title: "Zona Sur y CABA",
+    desc: "Llevamos los equipos con camión plataforma propio a toda Zona Sur y CABA.",
   },
   {
     icon: Wrench,
