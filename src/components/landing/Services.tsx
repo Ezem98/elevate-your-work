@@ -12,7 +12,7 @@ const services = [
     title: "Autoelevadores",
     img: forkliftImg,
     alt: "Autoelevador eléctrico ELEVAPLUS en depósito",
-    desc: "Equipos de distintas capacidades para carga y descarga en obra, depósito o industria. Ideales para mover mercadería pesada de forma segura y eficiente.",
+    desc: "También conocidos como sampi o clark. Equipos de distintas capacidades para carga y descarga en obra, depósito o industria. Ideales para mover mercadería pesada de forma segura y eficiente.",
   },
   {
     n: "02",
