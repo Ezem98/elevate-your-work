@@ -103,9 +103,7 @@ export function Services() {
             <h3 className="text-2xl font-black tracking-tight sm:text-3xl">
               Precios de alquiler de autoelevadores y sampi
             </h3>
-            <p className="text-sm font-light text-muted-foreground">
-              Mismo precio para todos los equipos.
-            </p>
+            <p className="text-sm font-light text-muted-foreground">Autoelevadores y sampi.</p>
           </div>
           <dl className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             <div className="flex flex-col gap-2 bg-accent/10 p-6 md:p-8">
@@ -113,7 +111,9 @@ export function Services() {
                 Por hora
               </dt>
               <dd className="text-3xl font-black tracking-tight">{PRECIO_HORA}</dd>
-              <dd className="text-sm text-muted-foreground">{MINIMO_HORAS}, todos los equipos</dd>
+              <dd className="text-sm text-muted-foreground">
+                {MINIMO_HORAS}. Autoelevadores y sampi.
+              </dd>
             </div>
             <div className="flex flex-col gap-2 bg-background p-6 md:p-8">
               <dt className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -128,6 +128,9 @@ export function Services() {
               <dd className="text-3xl font-black tracking-tight">Consultanos</dd>
             </div>
           </dl>
+          <p className="border-t border-border px-6 py-4 text-sm text-muted-foreground md:px-8">
+            Plataformas elevadoras: alquiler por día (mínimo 1 día). Consultanos.
+          </p>
           <div className="flex flex-col gap-5 border-t border-border p-6 md:flex-row md:items-center md:justify-between md:p-8">
             <p className="max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
               Zona Sur y CABA, con traslado en camión plataforma propio. Factura A, ART y seguro de

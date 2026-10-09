@@ -5,8 +5,8 @@ import { MINIMO_HORAS, PRECIO_HORA } from "./constants";
 const points = [
   {
     icon: BadgeDollarSign,
-    title: "Precios bajos",
-    desc: `Alquiler por hora a ${PRECIO_HORA}, ${MINIMO_HORAS}. Mismo precio para todos los equipos.`,
+    title: "Proveedor formal",
+    desc: `Factura A, ART, seguro de carga y habilitaciones para entrar a cualquier planta. Autoelevadores por hora a ${PRECIO_HORA}, ${MINIMO_HORAS}.`,
     destacado: true,
   },
   {
