@@ -22,7 +22,7 @@ export function Hero() {
           </h1>
           <p className="max-w-xl text-base font-light text-muted-foreground sm:text-lg">
             Autoelevadores (sampi, clark), plataformas, zorras y escaleras. Equipos confiables,
-            entrega rápida y cobertura en Zona Sur y todo el país.
+            entrega rápida y cobertura en Zona Sur y CABA.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
@@ -54,11 +54,11 @@ export function Hero() {
           <dl className="mt-4 grid grid-cols-3 gap-6 border-t border-border pt-8 text-left">
             <div>
               <dt className="text-xs uppercase tracking-wider text-muted-foreground">Cobertura</dt>
-              <dd className="mt-1 text-2xl font-bold">Nacional</dd>
+              <dd className="mt-1 text-2xl font-bold">Sur y CABA</dd>
             </div>
             <div>
-              <dt className="text-xs uppercase tracking-wider text-muted-foreground">Base</dt>
-              <dd className="mt-1 text-2xl font-bold">Zona Sur</dd>
+              <dt className="text-xs uppercase tracking-wider text-muted-foreground">Traslado</dt>
+              <dd className="mt-1 text-2xl font-bold">Propio</dd>
             </div>
             <div>
               <dt className="text-xs uppercase tracking-wider text-muted-foreground">Equipos</dt>
