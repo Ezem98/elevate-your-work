@@ -1,4 +1,4 @@
-export const SITE_URL = "https://www.elevaplus.com.ar";
+export const SITE_URL = "https://www.eleva-plus.com.ar";
 
 export const PHONE_RAW = "+5491132765635";
 export const PHONE_DISPLAY = "+54 9 11 3276-5635";
