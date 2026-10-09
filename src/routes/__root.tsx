@@ -80,7 +80,7 @@ const schemaLocalBusiness = {
   name: "ELEVAPLUS",
   alternateName: "Eleveplus",
   description:
-    "Alquiler de maquinaria de elevación, autoelevadores, plataformas de elevación tijera y articuladas, zorras, escaleras, servicio de transporte de carga pesada y mantenimiento en Zona Sur y CABA.",
+    "Alquiler de maquinaria de elevación, autoelevadores, plataformas de elevación tijera, zorras, escaleras, servicio de transporte de carga pesada y mantenimiento en Zona Sur y CABA.",
   url: SITE_URL,
   telephone: PHONE_RAW,
   priceRange: "$$",
@@ -131,8 +131,7 @@ const schemaLocalBusiness = {
         itemOffered: {
           "@type": "Service",
           name: "Alquiler de Plataformas de Elevación",
-          description:
-            "Plataformas tijera y articuladas para trabajos en altura seguros y eficientes.",
+          description: "Plataformas tijera para trabajos en altura seguros y eficientes.",
         },
       },
       {
