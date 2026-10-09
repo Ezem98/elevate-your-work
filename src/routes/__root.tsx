@@ -113,7 +113,7 @@ const schemaLocalBusiness = {
           "@type": "Service",
           name: "Alquiler de Autoelevadores",
           description:
-            "Alquiler de autoelevadores a combustión y eléctricos para industrias, obras y depósitos.",
+            "Alquiler de autoelevadores (sampi, clark) a combustión y eléctricos para industrias, obras y depósitos.",
         },
       },
       {

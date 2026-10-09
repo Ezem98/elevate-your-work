@@ -21,8 +21,8 @@ export function Hero() {
             para tu obra o depósito.
           </h1>
           <p className="max-w-xl text-base font-light text-muted-foreground sm:text-lg">
-            Autoelevadores, plataformas, zorras y escaleras. Equipos confiables, entrega rápida y
-            cobertura en Zona Sur y todo el país.
+            Autoelevadores (sampi, clark), plataformas, zorras y escaleras. Equipos confiables,
+            entrega rápida y cobertura en Zona Sur y todo el país.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
