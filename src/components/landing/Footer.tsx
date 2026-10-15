@@ -9,7 +9,13 @@ import {
 } from "./constants";
 import { trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
 
-export function Footer() {
+export function Footer({
+  whatsappUrl = WHATSAPP_URL,
+  zona = "Zona Sur y CABA · Traslado con camión propio",
+}: {
+  whatsappUrl?: string;
+  zona?: string;
+}) {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
@@ -31,7 +37,7 @@ export function Footer() {
               Contacto
             </span>
             <a
-              href={WHATSAPP_URL}
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick("footer_whatsapp")}
@@ -55,7 +61,7 @@ export function Footer() {
             </a>
             <span className="inline-flex items-center gap-2 text-sm text-primary-foreground/70">
               <MapPin className="h-4 w-4" />
-              Zona Sur y CABA · Traslado con camión propio
+              {zona}
             </span>
           </div>
           <div className="flex flex-col gap-3">
