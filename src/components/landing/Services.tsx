@@ -4,12 +4,22 @@ import palletImg from "@/assets/service-pallet.jpg";
 import ladderImg from "@/assets/service-ladder.jpg";
 import transportImg from "@/assets/services/service-transport.jpg";
 import maintenanceImg from "@/assets/services/service-maintenance.jpg";
+import { Link } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { useFadeIn } from "@/hooks/use-fade-in";
 import { trackWhatsAppClick } from "@/lib/analytics";
-import { MINIMO_HORAS, PRECIO_HORA, WHATSAPP_URL } from "./constants";
+import { MINIMO_HORAS, PRECIO_HORA, TRANSPORTE_PATH, WHATSAPP_URL } from "./constants";
 
-const services = [
+type Servicio = {
+  n: string;
+  title: string;
+  img: string;
+  alt: string;
+  desc: string;
+  link?: { to: typeof TRANSPORTE_PATH; label: string };
+};
+
+const services: Servicio[] = [
   {
     n: "01",
     title: "Autoelevadores y sampi",
@@ -44,6 +54,7 @@ const services = [
     img: transportImg,
     alt: "Camión plataforma ELEVAPLUS transportando un vehículo utilitario",
     desc: "Trasladamos vehículos, maquinaria pesada y equipos industriales con camión plataforma, cuidando cada carga de punto a punto en Zona Sur y CABA.",
+    link: { to: TRANSPORTE_PATH, label: "Ver transporte" },
   },
   {
     n: "06",
@@ -93,6 +104,16 @@ export function Services() {
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <h3 className="text-lg font-bold tracking-tight">{s.title}</h3>
                 <p className="text-sm font-light leading-relaxed text-muted-foreground">{s.desc}</p>
+                {s.link && (
+                  <Link
+                    to={s.link.to}
+                    id="services-transporte-link"
+                    className="mt-auto inline-flex w-fit items-center gap-2 pt-2 text-sm font-semibold uppercase tracking-wider text-foreground underline-offset-8 hover:underline"
+                  >
+                    {s.link.label}
+                    <ArrowRight className="h-4 w-4 text-accent" />
+                  </Link>
+                )}
               </div>
             </article>
           ))}

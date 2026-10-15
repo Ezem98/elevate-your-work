@@ -8,8 +8,13 @@ import { Coverage } from "@/components/landing/Coverage";
 import { FinalCTA } from "@/components/landing/FinalCTA";
 import { Footer } from "@/components/landing/Footer";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
+import { SITE_URL } from "@/components/landing/constants";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [{ property: "og:url", content: SITE_URL }],
+    links: [{ rel: "canonical", href: SITE_URL }],
+  }),
   component: Index,
 });
 

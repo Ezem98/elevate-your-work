@@ -8,6 +8,10 @@ export const WHATSAPP_NUMBER = PHONE_DISPLAY;
 export const WHATSAPP_URL =
   "https://wa.me/5491132765635?text=" +
   encodeURIComponent("Hola ELEVAPLUS, quiero cotizar un alquiler por hora.");
+export const WHATSAPP_TRANSPORTE_URL =
+  "https://wa.me/5491132765635?text=" + encodeURIComponent("Hola, quiero cotizar un traslado");
+
+export const TRANSPORTE_PATH = "/transporte-de-maquinaria";
 
 // Precio publicado: tiene que coincidir con los anuncios de Google Ads.
 export const PRECIO_HORA = "$40.000 + IVA";

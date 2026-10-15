@@ -1,19 +1,45 @@
+import { Link } from "@tanstack/react-router";
 import { MessageCircle, Phone } from "lucide-react";
-import { PHONE_DISPLAY, PHONE_TEL_HREF, WHATSAPP_URL } from "./constants";
+import { PHONE_DISPLAY, PHONE_TEL_HREF, TRANSPORTE_PATH, WHATSAPP_URL } from "./constants";
 import { trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
 
-export function Nav() {
+const menu = [
+  { to: "/", hash: "servicios", label: "Alquiler" },
+  { to: TRANSPORTE_PATH, label: "Transporte" },
+] as const;
+
+function MenuLinks({ className }: { className: string }) {
+  return (
+    <nav aria-label="Principal" className={className}>
+      {menu.map((item) => (
+        <Link
+          key={item.label}
+          to={item.to}
+          hash={"hash" in item ? item.hash : undefined}
+          activeOptions={{ includeHash: "hash" in item }}
+          className="text-xs font-semibold uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground data-[status=active]:text-foreground"
+        >
+          {item.label}
+        </Link>
+      ))}
+    </nav>
+  );
+}
+
+export function Nav({ whatsappUrl = WHATSAPP_URL }: { whatsappUrl?: string }) {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 md:px-10">
-        <a href="#top" className="flex min-w-0 items-center gap-2" id="nav-brand-logo">
+        <Link to="/" hash="top" className="flex min-w-0 items-center gap-2" id="nav-brand-logo">
           <span className="inline-block h-2.5 w-2.5 shrink-0 bg-accent" aria-hidden />
           <span className="truncate text-lg font-black tracking-tight">
             ELEVA<span className="text-accent">PLUS</span>
           </span>
-        </a>
+        </Link>
 
         <div className="flex items-center gap-3 sm:gap-4">
+          <MenuLinks className="hidden items-center gap-5 sm:flex" />
+
           <a
             href={PHONE_TEL_HREF}
             onClick={() => trackPhoneClick("nav_header")}
@@ -27,7 +53,7 @@ export function Nav() {
           </a>
 
           <a
-            href={WHATSAPP_URL}
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("nav_header")}
@@ -41,6 +67,7 @@ export function Nav() {
           </a>
         </div>
       </div>
+      <MenuLinks className="flex items-center gap-6 border-t border-border/70 px-6 py-2 sm:hidden" />
     </header>
   );
 }

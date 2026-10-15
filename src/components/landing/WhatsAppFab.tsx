@@ -2,10 +2,10 @@ import { MessageCircle } from "lucide-react";
 import { WHATSAPP_URL } from "./constants";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
-export function WhatsAppFab() {
+export function WhatsAppFab({ href = WHATSAPP_URL }: { href?: string }) {
   return (
     <a
-      href={WHATSAPP_URL}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackWhatsAppClick("fab_floating_button")}
