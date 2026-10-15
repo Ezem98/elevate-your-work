@@ -8,17 +8,18 @@ import {
   BrickWall,
   Car,
   Container,
-  Factory,
   FileText,
   Forklift,
   HardHat,
   MapPin,
   MessageCircle,
+  Package,
   PackageCheck,
   Phone,
   ShieldCheck,
   Tractor,
   Truck,
+  Ban,
 } from "lucide-react";
 import { useFadeIn } from "@/hooks/use-fade-in";
 import { trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
@@ -30,25 +31,21 @@ import {
 } from "@/components/landing/constants";
 
 const cargas = [
-  { icon: Car, title: "Autos y utilitarios" },
+  { icon: Car, title: "Autos y utilitarios", detalle: "Remolque, incluidos 0 km" },
   { icon: Tractor, title: "Maquinaria vial" },
   { icon: Forklift, title: "Autoelevadores" },
-  { icon: Container, title: "Módulos y estructuras" },
-  { icon: BrickWall, title: "Materiales de obra" },
-  { icon: Factory, title: "Equipos industriales" },
+  { icon: Package, title: "Materiales varios", detalle: "Corralón, metalúrgica, obra" },
+  { icon: Container, title: "Contenedores", detalle: "De hasta 20 pies" },
 ];
 
-// Solo se muestran especificaciones confirmadas por ELEVAPLUS. Completar cuando estén los datos.
-const equipos: { title: string; desc: string; specs: { label: string; valor: string }[] }[] = [
+const equipos = [
   {
-    title: "Camión plataforma",
-    desc: "Para vehículos, utilitarios, autoelevadores, módulos y equipos medianos.",
-    specs: [],
+    title: "Camión plancha con malacate",
+    desc: "Plancha con malacate para subir vehículos y equipos.",
   },
   {
-    title: "Trailer",
-    desc: "Para maquinaria vial, cargas largas y equipos de mayor porte.",
-    specs: [],
+    title: "Tráiler superbajo basculante",
+    desc: "Baja al piso: carga sin rampas.",
   },
 ];
 
@@ -62,13 +59,17 @@ const motivos = [
   {
     icon: ShieldCheck,
     title: "Seguro de carga",
-    desc: "Tu equipo viaja asegurado de punto a punto.",
+    desc: "Tu carga viaja asegurada de punto a punto.",
   },
-  { icon: Truck, title: "Equipos propios", desc: "Camión plataforma y trailer de nuestra flota." },
+  {
+    icon: Truck,
+    title: "Equipos propios",
+    desc: "Camión plancha y tráiler superbajo de nuestra flota.",
+  },
   {
     icon: PackageCheck,
-    title: "Carga y descarga",
-    desc: "Coordinamos la carga en origen y la descarga en destino.",
+    title: "Carga con malacate",
+    desc: "Subimos vehículos y equipos a la plancha con malacate.",
   },
 ];
 
@@ -92,6 +93,15 @@ function Encabezado({ n, etiqueta, titulo }: { n: string; etiqueta: string; titu
         {titulo}
       </h2>
     </div>
+  );
+}
+
+function AvisoAuxilio({ className }: { className: string }) {
+  return (
+    <p className={`flex items-center gap-2 text-sm text-muted-foreground ${className}`}>
+      <Ban className="h-4 w-4 shrink-0 text-accent" />
+      No realizamos auxilio mecánico en vía pública.
+    </p>
   );
 }
 
@@ -154,17 +164,24 @@ function QueTrasladamos() {
         />
         <ul
           ref={fade.ref}
-          className={`grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3 ${fade.className}`}
+          className={`grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-5 ${fade.className}`}
         >
-          {cargas.map(({ icon: Icon, title }) => (
-            <li key={title} className="flex items-center gap-4 bg-background p-6">
+          {cargas.map(({ icon: Icon, title, detalle }) => (
+            <li
+              key={title}
+              className="flex items-center gap-4 bg-background p-6 sm:last:col-span-2 lg:flex-col lg:items-start lg:last:col-span-1"
+            >
               <span className="grid h-12 w-12 shrink-0 place-items-center bg-accent text-accent-foreground">
                 <Icon className="h-5 w-5" strokeWidth={2.2} />
               </span>
-              <span className="text-lg font-bold tracking-tight">{title}</span>
+              <span className="flex flex-col">
+                <span className="text-lg font-bold tracking-tight">{title}</span>
+                {detalle && <span className="text-sm text-muted-foreground">{detalle}</span>}
+              </span>
             </li>
           ))}
         </ul>
+        <AvisoAuxilio className="mt-6" />
       </div>
     </section>
   );
@@ -188,23 +205,12 @@ function Equipos() {
                 <h3 className="text-2xl font-black tracking-tight">{e.title}</h3>
               </div>
               <p className="text-sm font-light leading-relaxed text-muted-foreground">{e.desc}</p>
-              {e.specs.length > 0 ? (
-                <dl className="grid divide-y divide-border border-t border-border">
-                  {e.specs.map((s) => (
-                    <div key={s.label} className="flex justify-between gap-4 py-3 text-sm">
-                      <dt className="text-muted-foreground">{s.label}</dt>
-                      <dd className="font-semibold">{s.valor}</dd>
-                    </div>
-                  ))}
-                </dl>
-              ) : (
-                <p className="border-t border-border pt-4 text-sm text-muted-foreground">
-                  Consultanos capacidad y medidas según tu carga.
-                </p>
-              )}
             </article>
           ))}
         </div>
+        <p className="mt-6 text-base text-foreground">
+          Contanos qué necesitás trasladar y te confirmamos el equipo adecuado.
+        </p>
       </div>
     </section>
   );
@@ -252,6 +258,7 @@ function PorQue() {
             </div>
           ))}
         </div>
+        <p className="mt-6 text-base text-foreground">Cotización según carga y destino.</p>
       </div>
     </section>
   );
@@ -302,6 +309,7 @@ function Contacto() {
         <p className="mt-6 max-w-2xl text-base font-light text-muted-foreground sm:text-lg">
           Contanos qué hay que trasladar, origen y destino, y te enviamos la cotización del viaje.
         </p>
+        <AvisoAuxilio className="mt-4" />
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           <a
