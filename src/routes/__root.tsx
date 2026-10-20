@@ -114,7 +114,7 @@ const schemaLocalBusiness = {
           "@type": "Service",
           name: "Alquiler de Autoelevadores",
           description:
-            "Alquiler de autoelevadores (sampi, clark) a combustión y eléctricos para industrias, obras y depósitos.",
+            "Alquiler de autoelevadores (clark, sampi, montacargas) a combustión y eléctricos para industrias, obras y depósitos.",
         },
         priceSpecification: {
           "@type": "UnitPriceSpecification",
@@ -130,8 +130,9 @@ const schemaLocalBusiness = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Alquiler de Plataformas de Elevación",
-          description: "Plataformas tijera para trabajos en altura seguros y eficientes.",
+          name: "Alquiler de Plataformas Elevadoras Tipo Tijera",
+          description:
+            "Tijeras elevadoras (plataformas elevadoras tipo tijera) por día, mínimo 1 día, para trabajos en altura.",
         },
       },
       {
@@ -155,9 +156,9 @@ const schemaLocalBusiness = {
   },
 };
 
-const SITE_TITLE = "Alquiler de Autoelevadores por Hora | Zona Sur y CABA — ELEVAPLUS";
+const SITE_TITLE = "Alquiler de Autoelevadores (Clark) y Plataformas Elevadoras | ELEVAPLUS";
 const SITE_DESCRIPTION =
-  "Alquiler de autoelevadores por hora y sampi en Zona Sur y CABA. $40.000 + IVA la hora, mínimo 3 hs. Factura A, ART y traslado propio.";
+  "Alquiler de autoelevadores (clark, sampi, montacargas) y plataformas elevadoras tipo tijera en Zona Sur y CABA. Por hora $40.000 + IVA, mínimo 3 hs. Factura A.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
