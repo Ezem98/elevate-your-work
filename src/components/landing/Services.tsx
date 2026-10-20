@@ -22,17 +22,17 @@ type Servicio = {
 const services: Servicio[] = [
   {
     n: "01",
-    title: "Autoelevadores y sampi",
+    title: "Alquiler de autoelevadores (clark / sampi)",
     img: forkliftImg,
     alt: "Autoelevador eléctrico ELEVAPLUS en depósito",
-    desc: "También conocidos como clark. Equipos de distintas capacidades para carga y descarga en obra, depósito o industria. Ideales para mover mercadería pesada de forma segura y eficiente.",
+    desc: "Alquilamos autoelevadores, también conocidos como clark, sampi o montacargas, por hora, día, semana o mes. Equipos de distintas capacidades para carga y descarga en obra, depósito o industria.",
   },
   {
     n: "02",
-    title: "Plataformas de elevación",
+    title: "Alquiler de plataformas elevadoras tipo tijera (tijeras elevadoras)",
     img: platformImg,
-    alt: "Plataforma tijera de elevación",
-    desc: "Soluciones para trabajos en altura: mantenimiento, montaje, pintura o construcción. Máxima estabilidad y seguridad en cada operación.",
+    alt: "Plataforma elevadora tipo tijera",
+    desc: "La tijera elevadora, que muchos buscan como grúa elevadora, para trabajos en altura: mantenimiento, montaje, pintura o construcción. Alquiler por día, mínimo 1 día.",
   },
   {
     n: "03",
